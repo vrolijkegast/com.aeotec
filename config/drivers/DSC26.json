@@ -1,0 +1,124 @@
+{
+	"id": "DSC26103",
+	"class": "light",
+	"name": {
+		"en": "Nano Switch (G2)"
+	},
+	"capabilities": [
+		"onoff"
+	],
+	"images": {
+		"large": "/drivers/DSC26/assets/images/large.png",
+		"small": "/drivers/DSC26/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": [
+			134
+		],
+		"productTypeId": [
+			3
+		],
+		"productId": [
+			26
+		],
+		"learnmode": {
+			"instruction": {
+				"en": "Short press the action button on the back of the Nano Switch.",
+                "nl": "Druk kort op de actie knop op de achterkant van de Nano Switch."
+			}
+		},
+		"zwaveAllianceProductId": 768,
+		"associationGroups": [
+			1,
+			3,
+			4
+		],
+		"defaultConfiguration": [
+			{
+				"id": 80,
+				"value": 3,
+				"size": 1
+			},
+			{
+				"id": 90,
+				"size": 1,
+				"value": 1
+			},
+			{
+				"id": 92,
+				"size": 1,
+				"value": 30
+			}
+		]
+	},
+	"settings": [
+		{
+			"id": 80,
+			"type": "dropdown",
+			"label": {
+				"en": "Notification status",
+				"nl": "Notificatie status"
+			},
+			"hint": {
+				"en": "Enables automatic notifications to associated devices whenever there is a state change.",
+				"nl": "Instelling on automatisch notificaties te sturen naar geassocieerde apparaten"
+			},
+			"value": "1",
+			"values": [
+				{
+					"id": "0",
+					"label": {
+						"en": "None",
+						"nl": "Geen"
+					}
+				},
+				{
+					"id": "1",
+					"label": {
+						"en": "Hail",
+						"nl": "Aanroep"
+					}
+				},
+				{
+					"id": "1",
+					"label": {
+						"en": "Basic",
+						"nl": "Basis"
+					}
+				}
+			]
+		},
+		{
+			"id": 120,
+			"type": "dropdown",
+			"label": {
+				"en": "Switch type",
+				"nl": "Schakelaar type"
+			},
+			"value": "0",
+			"values": [
+				{
+					"id": "0",
+					"label": {
+						"en": "Momentary switch",
+						"nl": "Pulsdruk schakelaar"
+					}
+				},
+				{
+					"id": "1",
+					"label": {
+						"en": "2-state switch mode",
+						"nl": "2-state schakel modus"
+					}
+				},
+				{
+					"id": "2",
+					"label": {
+						"en": "3-way switch mode",
+						"nl": "3-way schakel modus"
+					}
+				}
+			]
+		}
+	]
+}
