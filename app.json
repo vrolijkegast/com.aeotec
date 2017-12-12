@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "1.6.1",
+  "version": "1.6.2",
   "compatibility": ">=1.0.0",
   "category": [
     "appliances",
@@ -446,6 +446,182 @@
             "en": "Set which report will be sent to the associated nodes when the Water Sensor detects water",
             "nl": "Configureer welk rapport er verstuurd wordt naar de geassocieerde nodes als de Water Sensor water detecteert"
           }
+        }
+      ]
+    },
+    {
+      "id": "DSC26103",
+      "class": "light",
+      "name": {
+        "en": "Nano Switch (G2)"
+      },
+      "capabilities": [ "onoff" ],
+      "images": {
+        "large": "/drivers/DSC26/assets/images/large.png",
+        "small": "/drivers/DSC26/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": [ 134 ],
+        "productTypeId": [ 3 ],
+        "productId": [ 26 ],
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Nano Switch.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Nano Switch."
+          }
+        },
+        "productDocumentation": "https://aeotec.freshdesk.com/helpdesk/attachments/6009584525",
+        "zwaveAllianceProductId": 768,
+        "imageRemotePath":"https://products.z-wavealliance.org/ProductImages/Index?productName=ZC08-13030005",
+        "associationGroups": [
+          1,
+          3,
+          4
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 3,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "blinking",
+          "type": "number",
+          "label": {
+            "en": "Blinking behavior",
+            "nl": "Knipper gedrag"
+          },
+          "hint": {
+            "en": "This is actually a double byte value. The LSB defines the total time the device needs to blink in seconds. The MSB defines the on/off interval of the blink in tenths of seconds.",
+            "nl": "Deze instelling bestaat eigenlijk uit twee waarden. De minst significante byte definieert de totale tijd dat de schakelaar moet knipperen in seconden. De meest significante byte definieert het knipper-interval in tienden van seconden.
+          },
+          "value": "0",
+          "attr": {
+            "min": 0,
+            "max": 65535
+          }
+        },
+        {
+          "id": "notifications",
+          "type": "dropdown",
+          "label": {
+            "en": "Notification status",
+            "nl": "Notificatie status"
+          },
+          "hint": {
+            "en": "Enables automatic notifications to associated devices whenever there is a state change.",
+            "nl": "Instelling on automatisch notificaties te sturen naar geassocieerde apparaten"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "None",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Hail",
+                "nl": "Aanroep"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Basic report",
+                "nl": "Basis rapport"
+              }
+            }
+          ]
+        },
+        {
+          "id": "button_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type",
+            "nl": "Schakelaar type"
+          },
+          "value": "255",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "255",
+              "label": {
+                "en": "Unidentified mode",
+                "nl": "Ongeïdentificeerde modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "config_lock",
+          "type": "dropdown",
+          "label": {
+            "en": "Lock Configuration",
+            "nl": "Configuratie vastzetten"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enable",
+                "nl": "Ingeschakeld"
+              }
+            }
+          ]
+        },
+        {
+          "id": "config_reset",
+          "type": "checkbox",
+          "label": {
+            "en": "Reset configuration to default setting",
+            "nl": "Herstel naar standaard instellingen"
+          },
+          "value": false
         }
       ]
     },
