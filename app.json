@@ -457,8 +457,8 @@
       },
       "capabilities": [ "onoff" ],
       "images": {
-        "large": "/drivers/DSC26/assets/images/large.png",
-        "small": "/drivers/DSC26/assets/images/small.png"
+        "large": "/drivers/DSC26103/assets/images/large.png",
+        "small": "/drivers/DSC26103/assets/images/small.png"
       },
       "zwave": {
         "manufacturerId": [ 134 ],
@@ -506,9 +506,9 @@
           },
           "hint": {
             "en": "This is actually a double byte value. The LSB defines the total time the device needs to blink in seconds. The MSB defines the on/off interval of the blink in tenths of seconds.",
-            "nl": "Deze instelling bestaat eigenlijk uit twee waarden. De minst significante byte definieert de totale tijd dat de schakelaar moet knipperen in seconden. De meest significante byte definieert het knipper-interval in tienden van seconden.
+            "nl": "Deze instelling bestaat eigenlijk uit twee waarden. De minst significante byte definieert de totale tijd dat de schakelaar moet knipperen in seconden. De meest significante byte definieert het knipper-interval in tienden van seconden."
           },
-          "value": "0",
+          "value": 0,
           "attr": {
             "min": 0,
             "max": 65535
